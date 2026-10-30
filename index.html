@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Luiz Machado · Curadoria Imobiliária em Salvador</title>
+<meta name="description" content="Curadoria de imóveis em Salvador e Litoral Norte. Apartamentos e casas de alto padrão no Horto Florestal, Caminho das Árvores, Busca Vida e mais. CRECI-BA 31767.">
+<meta property="og:title" content="Luiz Machado · Curadoria Imobiliária">
+<meta property="og:description" content="Escolher o imóvel certo não é sorte, é estratégia.">
+<meta property="og:image" content="fotos/im24.webp">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=Inter:wght@400;500&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=20261030132537">
+</head>
+<body data-page="home">
+<div id="topo"></div>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Curadoria imobiliária · Salvador e Litoral Norte</div>
+      <h1>Escolher o imóvel certo não é <span class="sorte">sorte</span>, é <em>estratégia.</em></h1>
+      <p class="lead">Eu seleciono, visito e analiso cada imóvel antes de te mostrar: prumada, nascente, vista, documentação. Você só conhece o que vale a pena.</p>
+      <form class="busca" id="busca">
+        <label><span>Onde</span><select id="b-local"></select></label>
+        <label><span>Tipo</span><select id="b-tipo"><option value="">Todos</option><option>Apartamento</option><option>Casa</option><option>Cobertura</option><option>Studio</option></select></label>
+        <label><span>Valor</span><select id="b-preco"></select></label>
+        <button class="btn">Buscar</button>
+      </form>
+      <div class="meta">
+        <div><b id="n-ativos">0</b><span>imóveis na curadoria</span></div>
+        <div><b id="n-bairros">0</b><span>bairros e condomínios</span></div>
+        <div><b>31767</b><span>CRECI-BA</span></div>
+      </div>
+    </div>
+    <div class="hero-fotos">
+      <div class="f f1"><img src="fotos/im45.webp" alt="Piscina da casa no Encontro das Águas"></div>
+      <div class="f f2"><img src="fotos/im25.webp" alt="Vista mar do Rio Vermelho"></div>
+      <a class="tag" href="imovel.html?id=45"><small>Na curadoria</small><b>Encontro das Águas, projeto Davi Bastos</b><span>500 m² · 5 suítes · 4 vagas</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="faixa"><div class="trilho"></div></div>
+
+<section class="s">
+  <div class="wrap">
+    <div class="s-head rv">
+      <div><span class="eyebrow">Seleção da semana</span><h2 class="h-sec">Os imóveis que eu<br>mostraria <em>primeiro</em></h2></div>
+      <p>Cada imóvel aqui passou pela minha visita. Tem vídeo do tour, ficha completa e valor real, sem "consulte".</p>
+    </div>
+    <div class="grid" id="destaques"></div>
+    <div style="text-align:center;margin-top:56px"><a class="btn ghost" href="imoveis.html">Ver todos os imóveis →</a></div>
+  </div>
+</section>
+
+<section class="s" id="bairros" style="padding-top:0">
+  <div class="wrap">
+    <div class="s-head rv">
+      <div><span class="eyebrow">Explore por bairro</span><h2 class="h-sec">Do Horto ao<br><em>pé na areia</em></h2></div>
+      <p>De Salvador ao Litoral Norte: os endereços onde eu mais trabalho e conheço cada condomínio.</p>
+    </div>
+    <div class="bairros" id="lista-bairros"></div>
+  </div>
+</section>
+
+<section class="s curadoria" id="curadoria">
+  <div class="wrap">
+    <div class="s-head rv">
+      <div><span class="eyebrow">Como funciona</span><h2 class="h-sec">Curadoria é dizer <em>não</em><br>pra quase tudo</h2></div>
+      <p>Portal mostra mil anúncios. Eu te mostro os três que fazem sentido pra sua vida.</p>
+    </div>
+    <div class="passos">
+      <div class="passo rv"><div class="n">01</div><h3>Você me conta o momento</h3><p>Família, rotina, bairro, orçamento, se vai financiar. Cinco minutos de conversa valem mais que cinquenta filtros.</p></div>
+      <div class="passo rv"><div class="n">02</div><h3>Eu filtro e visito antes</h3><p>Seleciono dentro e fora da minha carteira, visito, gravo o tour e descarto o que não passa.</p></div>
+      <div class="passo rv"><div class="n">03</div><h3>Você visita só o que vale</h3><p>Chega com a análise pronta e eu acompanho da proposta até a escritura, financiamento incluído.</p></div>
+    </div>
+    <div class="checa rv"><span>Nascente ou poente</span><span>Melhor prumada</span><span>Vista permanente</span><span>Documentação regular</span><span>Porteira fechada</span><span>Valor de condomínio e IPTU</span><span>Financiamento Caixa</span></div>
+  </div>
+</section>
+
+<section class="s" id="perfil">
+  <div class="wrap perfil">
+    <div class="rv">
+      <span class="eyebrow">Me ajude a escolher</span>
+      <h2 class="h-sec" style="margin:16px 0 22px">Conte o que você<br>procura. Eu <em>garimpo.</em></h2>
+      <p style="color:var(--muted);max-width:420px">Preencha em 30 segundos. Eu cruzo com a minha carteira e com o que ainda nem foi anunciado, e te chamo no WhatsApp com as opções.</p>
+    </div>
+    <div class="form rv">
+      <form id="form-perfil">
+        <div class="row">
+          <label class="campo"><span>Seu nome</span><input name="nome" required autocomplete="name"></label>
+          <label class="campo"><span>WhatsApp</span><input name="fone" required inputmode="tel" placeholder="(71) 9 0000-0000"></label>
+        </div>
+        <div class="campo"><span>Bairros que te interessam</span><div class="chips" id="p-bairros"></div></div>
+        <div class="row">
+          <label class="campo"><span>Até quanto</span><select name="max" id="p-max"></select></label>
+          <label class="campo"><span>Suítes</span><select name="suites"><option value="1">1 ou mais</option><option value="2">2 ou mais</option><option value="3" selected>3 ou mais</option><option value="4">4 ou mais</option></select></label>
+        </div>
+        <label class="campo"><span>Quando quer se mudar</span><select name="prazo"><option>Nos próximos 3 meses</option><option>Em até 1 ano</option><option>Só pesquisando</option><option>É investimento</option></select></label>
+        <button class="btn" style="width:100%;justify-content:center">Quero minha curadoria</button>
+      </form>
+      <div class="ok-msg">
+        <div class="eyebrow">Recebido</div>
+        <h3>Já estou olhando pra você.</h3>
+        <p id="ok-qtd" style="color:var(--muted);margin-bottom:22px"></p>
+        <a class="btn zap" id="ok-zap" target="_blank">Adiantar pelo WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="vendidos" style="padding-top:0">
+  <div class="wrap">
+    <div class="s-head rv">
+      <div><span class="eyebrow">Já encontraram dono</span><h2 class="h-sec">Vendidos <em>recentemente</em></h2></div>
+      <p>Imóvel bem escolhido e bem apresentado não fica parado.</p>
+    </div>
+    <div class="vendidos" id="lista-vendidos"></div>
+  </div>
+</section>
+
+<section class="s" id="sobre" style="background:var(--paper2)">
+  <div class="wrap sobre">
+    <div class="retrato rv"><img src="fotos/luiz.webp" alt="Luiz Machado, corretor de imóveis em Salvador"></div>
+    <div class="rv">
+      <span class="eyebrow">Quem faz a curadoria</span>
+      <blockquote>"Escolher o imóvel certo não é sorte, é estratégia."</blockquote>
+      <p>Sou Luiz Machado, corretor em Salvador e no Litoral Norte. Trabalho com venda de apartamentos e casas, do quarto e sala no Caminho das Árvores à casa pé na areia em Busca Vida.</p>
+      <p>Cada imóvel que entra na minha carteira eu visito, gravo e analiso pessoalmente. É o que você vê no meu Instagram todos os dias.</p>
+      <div class="nums"><div><b>5+</b><span>anos de mercado</span></div><div><b>7 mil</b><span>seguidores no Instagram</span></div><div><b>60+</b><span>imóveis em carteira</span></div></div>
+      <a class="btn" href="https://instagram.com/luizimoveisba" target="_blank">Acompanhar no Instagram</a>
+    </div>
+  </div>
+</section>
+
+<div id="rodape"></div>
+<script src="assets/data.js?v=20261030132537"></script>
+<script src="assets/store.js?v=20261030132537"></script>
+<script src="assets/site.js?v=20261030132537"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Painel do corretor · Luiz Machado</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/admin.css?v=20261030132537">
+</head>
+<body>
+
+<div class="login" id="login">
+  <div class="lado-foto"><p>Do Instagram pro site em 10 segundos. E nenhum cliente esquecido.</p></div>
+  <div class="caixa">
+    <span class="logo"></span>
+    <h1>Painel do corretor</h1>
+    <p class="sub">Seus imóveis, seu site e seus clientes num lugar só.</p>
+    <button class="btn" id="entrar" style="height:52px">Entrar na demonstração</button>
+    <div class="aviso">Versão de demonstração: os clientes do CRM são exemplos. Os imóveis são os do seu Instagram.</div>
+  </div>
+</div>
+
+<div class="app" id="app" style="display:none">
+  <nav class="menu">
+    <span class="logo"></span>
+    <button data-t="geral" class="on">Visão geral</button>
+    <button data-t="imoveis">Imóveis</button>
+    <button data-t="novo">Cadastrar imóvel</button>
+    <button data-t="crm">Clientes <span class="qt" id="qt-hoje"></span></button>
+    <div class="rod">Luiz Machado · CRECI 31767<a href="index.html" target="_blank">Ver meu site ↗</a></div>
+  </nav>
+  <main>
+    <!-- visão geral -->
+    <section class="tela on" id="t-geral">
+      <div class="cab"><div><h1 id="ola">Bom dia, Luiz</h1><p id="hoje-txt"></p></div><button class="btn" data-ir="novo">+ Cadastrar imóvel</button></div>
+      <div class="kpis" id="kpis"></div>
+      <div class="duas">
+        <div class="painel"><h2>Para fazer hoje</h2><div id="tarefas"></div></div>
+        <div class="painel"><h2>De onde vêm os clientes</h2><div id="origens"></div></div>
+      </div>
+      <div class="duas">
+        <div class="painel"><h2>Mais vistos no site esta semana</h2><div id="vistos"></div></div>
+        <div class="painel"><h2>Carteira por região</h2><div id="regioes"></div></div>
+      </div>
+    </section>
+
+    <!-- imóveis -->
+    <section class="tela" id="t-imoveis">
+      <div class="cab"><div><h1>Imóveis</h1><p>Mudou o status aqui, mudou no site. A estrela coloca o imóvel na seleção da página inicial.</p></div><button class="btn" data-ir="novo">+ Cadastrar imóvel</button></div>
+      <div class="busca-l"><input id="q" placeholder="Buscar por bairro, código ou condomínio"><select id="q-st"><option value="">Todos os status</option><option value="disponivel">Disponível</option><option value="reservado">Reservado</option><option value="vendido">Vendido</option></select></div>
+      <div class="tbl-wrap"><table><thead><tr><th></th><th>Imóvel</th><th>Valor</th><th>Status</th><th>Destaque</th><th></th></tr></thead><tbody id="tabela"></tbody></table></div>
+    </section>
+
+    <!-- cadastro rápido -->
+    <section class="tela" id="t-novo">
+      <div class="cab"><div><h1>Cadastrar imóvel</h1><p>Cole a legenda que você já escreveu pro Instagram. O painel lê e preenche a ficha sozinho.</p></div></div>
+      <div class="cad">
+        <div class="painel colar">
+          <h2><span class="passo-n">1</span>Cole a legenda do post</h2>
+          <textarea id="legenda" placeholder="📍Horto Florestal&#10;&#10;204 m² · 3 suítes · 4 vagas&#10;Valor: R$ 2.900.000,00 ..."></textarea>
+          <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap">
+            <button class="btn" id="ler">Preencher a ficha</button>
+            <button class="btn sec" id="exemplo">Usar uma legenda de exemplo</button>
+          </div>
+        </div>
+        <form class="painel" id="ficha">
+          <h2><span class="passo-n">2</span>Confira e publique</h2>
+          <div class="lido" id="lido">✓ <span id="lido-txt"></span></div>
+          <label class="foto-up" id="foto-up"><img id="foto-prev" alt=""><div><b>Foto de capa</b><div style="font-size:13px;color:var(--muted)">Toque para escolher. Pode ser o print da capa do reel.</div></div><input type="file" accept="image/*" id="foto"></label>
+          <div class="grade" style="margin-top:14px">
+            <label class="c w2"><span>Bairro</span><input name="bairro" required></label>
+            <label class="c"><span>Cidade</span><select name="cidade"><option>Salvador</option><option>Lauro de Freitas</option><option>Litoral Norte</option></select></label>
+            <label class="c"><span>Tipo</span><select name="tipo"><option>Apartamento</option><option>Casa</option><option>Cobertura</option><option>Studio</option><option>Loft</option></select></label>
+            <label class="c"><span>Área (m²)</span><input name="area" type="number" required></label>
+            <label class="c"><span>Quartos</span><input name="quartos" type="number"></label>
+            <label class="c"><span>Suítes</span><input name="suites" type="number"></label>
+            <label class="c"><span>Vagas</span><input name="vagas" type="number"></label>
+            <label class="c w2"><span>Valor de venda (R$)</span><input name="preco" inputmode="numeric"></label>
+            <label class="c"><span>Condomínio</span><input name="taxa_cond" inputmode="numeric"></label>
+            <label class="c"><span>IPTU</span><input name="iptu" inputmode="numeric"></label>
+            <label class="c w4"><span>Chamada do anúncio</span><input name="chamada"></label>
+            <label class="c w4"><span>Link do reel (opcional)</span><input name="reel" placeholder="https://www.instagram.com/reel/..."></label>
+            <div class="c w4"><span>Diferenciais encontrados</span><div class="tags" id="tags"><span style="color:var(--muted)">aparecem depois de ler a legenda</span></div></div>
+          </div>
+          <div style="display:flex;gap:10px;margin-top:18px"><button class="btn" style="flex:1">Publicar no site</button><button type="reset" class="btn sec">Limpar</button></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- CRM -->
+    <section class="tela" id="t-crm">
+      <div class="cab"><div><h1>Clientes</h1><p>Arraste o cartão entre as colunas. Quem chega pelo site já entra aqui com o imóvel que pediu.</p></div><button class="btn" id="novo-cli">+ Novo cliente</button></div>
+      <div class="kanban" id="kanban"></div>
+    </section>
+  </main>
+</div>
+
+<div class="fundo" id="fundo"></div>
+<aside class="gaveta" id="gaveta"></aside>
+<div class="toast" id="toast"></div>
+
+<script src="assets/data.js?v=20261030132537"></script>
+<script src="assets/store.js?v=20261030132537"></script>
+<script src="assets/admin.js?v=20261030132537"></script>
+</body>
+</html>
