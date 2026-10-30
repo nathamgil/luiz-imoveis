@@ -207,6 +207,14 @@ footer .base{display:flex;justify-content:space-between;padding-top:24px;font-si
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.hero h1 .sorte::after{animation:none;width:104%}}
 
+/* telas médias: busca em duas linhas */
+@media (max-width:1180px){
+  .busca{grid-template-columns:1fr 1fr}
+  .busca label:nth-child(1){grid-column:1/-1;border-right:0;border-bottom:1px solid var(--line)}
+  .busca label:nth-child(3){border-right:0}
+  .busca button{grid-column:1/-1;height:50px;justify-content:center}
+}
+
 /* celular */
 @media (max-width:980px){
   .nav,.top .btn{display:none}
